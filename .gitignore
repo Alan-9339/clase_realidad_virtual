@@ -75,3 +75,9 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 #Unity packages archives
 Packages/*.tgz
+/RecursosRep/modelos/backpackUV.png
+/RecursosRep/modelos/FinnPos.blend
+/RecursosRep/modelos/FinnPos.blend1
+/RecursosRep/modelos/FinnPos.mtl
+/RecursosRep/modelos/FinnPos.obj
+/RecursosRep/modelos/finnUV.png
