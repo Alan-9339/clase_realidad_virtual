@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="marcav5" size="1.000000 1.000000" />
+    <ImageTarget name="marcav4" size="1.000000 1.000000" />
+    <ImageTarget name="marcav3" size="1.000000 1.000000" />
+    <ImageTarget name="marcav2" size="1.000000 1.000000" />
+    <ImageTarget name="marcav1" size="1.000000 1.000000" />
     <ImageTarget name="hoguera1200x1200" size="1.000000 1.000000" />
   </Tracking>
 </QCARConfig>
