@@ -8,7 +8,7 @@ public class Move : MonoBehaviour
     public ObserverBehaviour[] ImageTargets;
     public int currentTarget = 0; 
     public float speed = 1.0f;
-    public float rotationSpeed = 5.0f; // Velocidad para que el giro sea suave
+    public float rotationSpeed = 7.0f;
 
     private bool isMoving = false;
 
@@ -34,16 +34,15 @@ public class Move : MonoBehaviour
             yield break;
         }
 
-        // --- 1. ROTACIÓN HACIA EL OBJETIVO ---
+        // Rotacion al marcador
         Vector3 targetDirection = target.transform.position - model.transform.position;
-        // Ignoramos la diferencia de altura (Y) para que no se incline hacia adelante o atrás
         targetDirection.y = 0; 
 
         if (targetDirection != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
             
-            // Girar suavemente hasta que estemos mirando casi de frente al marcador
+            // Gira hacia el marcador
             while (Quaternion.Angle(model.transform.rotation, targetRotation) > 0.1f)
             {
                 model.transform.rotation = Quaternion.Slerp(model.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
@@ -51,7 +50,7 @@ public class Move : MonoBehaviour
             }
         }
 
-        // --- 2. MOVIMIENTO (Tu lógica original con una mejora) ---
+        // Traslacion al marcador
         Vector3 startPosition = model.transform.position;
         float journey = 0f;
 
@@ -60,7 +59,7 @@ public class Move : MonoBehaviour
             journey += Time.deltaTime * speed;
             Vector3 endPosition = target.transform.position;
             
-            // Mantenemos la rotación mirando al objetivo por si mueves el marcador mientras camina
+            // Seguimiento en movimiento
             Vector3 dynamicDir = endPosition - model.transform.position;
             dynamicDir.y = 0;
             if(dynamicDir != Vector3.zero)

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="marca6" size="1.000000 1.000000" />
+    <ImageTarget name="marca5" size="1.000000 1.000000" />
+    <ImageTarget name="marca4" size="1.000000 1.000000" />
+    <ImageTarget name="marca3" size="1.000000 1.000000" />
+    <ImageTarget name="marca2" size="1.000000 1.000000" />
+    <ImageTarget name="marca1" size="1.000000 1.160998" />
     <ImageTarget name="marcav5" size="1.000000 1.000000" />
     <ImageTarget name="marcav4" size="1.000000 1.000000" />
     <ImageTarget name="marcav3" size="1.000000 1.000000" />
